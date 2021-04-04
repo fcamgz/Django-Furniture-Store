@@ -1,0 +1,21 @@
+{% extends 'store/main.html' %}
+{% block content %}
+    <br>
+    <h1 class="text-center">All Furniture</h1>
+    <br><hr><br>
+    <div class="container">
+    {% for furni in furniture %}
+        <div class="row featurette d-flex">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">{{ furni.name }}<span class="text-muted">{{ furni.code }}</span></h2>
+                <p class="lead">{{ furni.description }}</p>
+                <p>${{ furni.price }}</p>
+            </div>
+            <div class="col-md-5">
+                <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" style="width: 500px; height: 500px;" src="/static/{{ furni.image }}" data-holder-rendered="true">
+            </div>
+        </div>
+        <br><hr><br>
+    {% endfor %}
+    </div>
+{% endblock %}

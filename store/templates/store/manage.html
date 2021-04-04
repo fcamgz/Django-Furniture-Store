@@ -1,0 +1,90 @@
+{% extends 'store/main.html' %}
+{% block content %}
+    <br>
+<div class="container">
+    {% include 'store/orders.html' %}
+</div>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md">
+                <div class="card card-body">
+                    <h5 class="text-center">Furniture List</h5>
+                </div>
+                <div class="card card-body">
+                    <table class="table">
+                        <tr>
+                            <th>Furniture</th>
+                            <th>Category</th>
+                            <th>Price</th>
+                            <th>Update</th>
+                            <th>Delete</th>
+                        </tr>
+                        {% for furni in furniture %}
+                        <tr>
+                            <td>{{ furni.name }}</td>
+                            <td>{{ furni.category }}</td>
+                            <td>${{ furni.price }}</td>
+                            <td><a class="btn btn-sm btn-info" href="{% url 'update_furniture' furni.name %}">Update</a></td>
+                            <td><a class="btn btn-sm btn-danger" href="{% url 'delete_furniture' furni.name %}">Delete</a></td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+        </div>
+            <a class="btn btn-primary btn-sm btn-block" href="{% url 'create_furniture' %}">Create a Furniture</a>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-md-5">
+                <h5 class="text-center">Customer List</h5>
+                <hr>
+                <div class="card card-body">
+                    <table class="table table-sm">
+                        <tr>
+                            <th>Customer</th>
+                            <th>Phone</th>
+                            <th>Email</th>
+                        </tr>
+                        {% for customer in customers %}
+                            <tr>
+                                <td>{{ customer.name}}</td>
+                                <td>{{ customer.phone }}</td>
+                                <td>{{ customer.email }}</td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                    <a class="btn btn-primary btn-sm btn-block" href="{% url 'create_customer' %}">Create a Customer</a>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <h5 class="text-center">Order List</h5>
+                <hr>
+                <div class="card card-body">
+                    <table class="table table-sm">
+                        <tr>
+                            <th>Furniture Code</th>
+                            <th>Customer Name</th>
+                            <th>Status</th>
+                            <th>Purchased At</th>
+                            <th>Update</th>
+                            <th>Delete</th>
+                        </tr>
+                        {% for order in orders %}
+                            <tr>
+                                <td>{{ order.furniture.code }}</td>
+                                <td>{{ order.customer.name }}</td>
+                                <td>{{ order.status }}</td>
+                                <td>{{ order.soldBy }}</td>
+                                <td><a class="btn btn-sm btn-info" href="{% url 'update_order' order.id %}">Update</a></td>
+                                <td><a class="btn btn-sm btn-danger" href="{% url 'delete_order' order.id %}">Delete</a></td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+                <a class="btn btn-primary btn-sm btn-block" href="{% url 'create_order'%}">Create an Order</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+    <br>
+    <div class="container">
+        <form class="d-flex flex-column" action="" method="POST">
+            {% csrf_token %}
+            {{ form }}
+            <hr>
+            <input type="submit" name="Submit">
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+    <div class="container">
+    <br><br>
+        <h1 class="text-center">Contact Page</h1>
+    <div>
+        <form class="d-flex flex-column">
+            <label class="label" for="first-name">Your Name *</label>
+            <input id="first-name" type="text" name="first-name" placeholder="First name">
+            <input id="last-name" type="text" name="last-name" placeholder="Last name">
+            <label for="email">Email Address *</label>
+            <input id="email" type="text" name="email" placeholder="Eg. example@email.com">
+            <label for="phone">Phone Number</label>
+            <input id="phone" type="text" name="phone" placeholder="Eg. +1 800 000000">
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject">
+                <option value="complaint">Complaint</option>
+                <option value="refund">Refund</option>
+                <option value="quote">Quote</option>
+            </select>
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" placeholder="Please enter your comments..."></textarea>
+            <div class="text-center p-5">
+                <br>
+                <button class="btn btn-secondary">Send</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

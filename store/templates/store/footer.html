@@ -1,0 +1,49 @@
+<br><hr><br>
+<footer class="text-center text-lg-start">
+  <div class="container p-4">
+    <div class="row d-flex justify-content-center">
+      <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+        <h5 class="text-uppercase">Furniture Store</h5>
+        <p>
+            Our mission is to create Value for our customers through Reliability and Flexibility.
+            We want our customers to experience the warmth and comfort through Respect and Trust.
+        </p>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase mb-4">Navigate</h5>
+        <ul class="list-unstyled">
+          <li>
+            <a href="{% url 'home' %}" class="text-dark">Home Page</a>
+          </li>
+          <li>
+            <a href="{% url 'furniture' %}" class="text-dark">Furniture List</a>
+          </li>
+          <li>
+            <a href="{% url 'manage' %}" class="text-dark">Manage</a>
+          </li>
+          <li>
+            <a href="{% url 'contact' %}" class="text-dark">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+    <section class="mb-4">
+      <a class="btn btn-outline-light btn-floating m-1 bg-secondary" href="#!" role="button">
+          <i class="fa fa-facebook-f"></i>
+      </a>
+      <a class="btn btn-outline-light btn-floating m-1 bg-primary" href="#!" role="button">
+          <i class="fa fa-twitter"></i>
+      </a>
+      <a class="btn btn-outline-light btn-floating m-1 bg-warning" href="#!" role="button">
+          <i class="fa fa-google"></i>
+      </a>
+      <a class="btn btn-outline-light btn-floating m-1 bg-danger" href="#!" role="button">
+          <i class="fa fa-instagram"></i>
+      </a>
+    </section>
+  <div id="footer-bottom" class="text-center p-3 bg-light">
+    © 2020 Copyright:
+    <a class="text-dark" href="{% url 'contact' %}">Furniture Store</a>
+  </div>
+</footer>

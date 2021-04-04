@@ -1,0 +1,64 @@
+#logo{
+}
+
+body{
+    background-color: floralwhite;
+}
+
+#header-image{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+#header-image img{
+    height: 500px;
+    mask-image: linear-gradient(to top, transparent 5%, black 100%);
+}
+#header-image figcaption {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Matura MT Script Capitals";
+    font-size: 7em;
+    color: sienna;
+}
+
+#header-image p {
+    position: absolute;
+    top: 44%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Rage Italic";
+    font-size: 35px;
+}
+.navbar, #footer-bottom{
+    background-color: sienna;
+}
+.navbar-brand{
+    font-size: 25px;
+}
+
+.nav-item{
+    margin-left:20px;
+}
+.nav-link{
+    font-size: 20px;
+}
+#vision-mission h4{
+    font-size: 25px;
+    font-weight: bold;
+    font-family: "Times New Roman";
+}
+#customers{
+    background-color: #4cb4c7;
+}
+#orders{
+    background-color: #4cb4c7;
+}
+#delivered{
+    background-color: green;
+}
+#pending{
+    background-color: #7CD1C0;
+}
